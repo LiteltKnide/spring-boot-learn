@@ -4,6 +4,7 @@ import org.springframework.boot.context.event.ApplicationFailedEvent;
 import org.springframework.context.ApplicationListener;
 
 /**
+ * spring boot启动异常时执行事件
  * Created by ASUS on 2017/5/24.
  */
 public class MyApplicationFailedEventListener implements ApplicationListener<ApplicationFailedEvent> {
