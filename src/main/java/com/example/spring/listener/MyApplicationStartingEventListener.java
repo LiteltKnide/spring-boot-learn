@@ -7,6 +7,7 @@ import org.springframework.boot.context.event.ApplicationStartingEvent;
 import org.springframework.context.ApplicationListener;
 
 /**
+ * spring-boot 启动前
  * Created by ASUS on 2017/5/23.
  */
 public class MyApplicationStartingEventListener implements ApplicationListener<ApplicationStartingEvent> {

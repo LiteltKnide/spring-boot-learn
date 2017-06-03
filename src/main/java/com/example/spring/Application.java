@@ -1,6 +1,6 @@
 package com.example.spring;
 
-import com.example.spring.listener.MyApplicationStartingEventListener;
+import com.example.spring.listener.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +23,10 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication springApplication = new SpringApplication(Application.class);
         springApplication.addListeners(new MyApplicationStartingEventListener());
+        springApplication.addListeners(new MyApplicationEnvironmentPreparedEventListener());
+        springApplication.addListeners(new MyApplicationFailedEventListener());
+        springApplication.addListeners(new MyApplicationPreparedEventListener());
+        springApplication.addListeners(new MyApplicationReadyEventListener());
         springApplication.run(args);
     }
 }
