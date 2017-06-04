@@ -10,7 +10,8 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "user")
 // @PropertySource("classpath:config/user.properties")
-@PropertySource("classpath:application.properties")
+// @PropertySource("classpath:application.properties")
+@PropertySource("classpath:application.yml")
 public class User {
     private String userName;
     private int age;
